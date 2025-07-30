@@ -4,6 +4,7 @@ import CartPage from "./Pages/Cart";
 import Home from "./Home";
 import ProductPage from "./Pages/AllProducts/Components/Grid";
 import { Toaster } from "react-hot-toast";
+import About from "./Pages/About/About";
 
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
       <Toaster position="top-right" />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/cart" element={<CartPage />} />
               <Route path="/products" element={<ProductPage />} />
         </Routes>

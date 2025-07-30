@@ -2,6 +2,8 @@
 import bottle from '../assets/Images/bottle.png'
 import iphone14 from '../assets/Images/iphone_14_blue.png'
 import iphone16 from '../assets/Images/iphone_16_white.png'
+import watch1 from '../assets/Images/watch1.png'
+import watch2 from '../assets/Images/watch1c.png'
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
@@ -11,8 +13,8 @@ const imageSets = {
     dark: bottle,
   },
   afternoon: {
-    light: bottle,
-    dark: bottle,
+    light: watch1,
+    dark: watch2,
   },
   evening: {
     light: bottle,
@@ -69,7 +71,7 @@ export default function Hero() {
 
   return (
     <section className="min-h-screen flex relative flex-col md:flex-row justify-center items-center
-     bg-gradient-to-b from-blue-300 to-blue-700 dark:from-black dark:to-orange-700
+     bg-gradient-to-b from-white to-blue-700 dark:from-black dark:to-orange-700
       transition-colors duration-500 px-6 overflow-hidden">
       <div className="text-left w-full max-md:mt-20 md:w-1/2 py-12 md:py-0">
         <motion.h1
