@@ -76,12 +76,25 @@ export default function Footer() {
         </div>
       </motion.div>
 
-      {/* Bottom Bar */}
+      {/* Sentry bottom Bar */}
       <motion.div
-        className="mt-10 border-t border-gray-300 dark:border-gray-700 pt-6 text-sm flex flex-col md:flex-row justify-between items-center gap-4"
+        className=" border-gray-300 dark:border-gray-700 pt-20 mt-20 text-sm flex  md:flex-row justify-center items-center gap-4"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
+        viewport={{ once: true }}
+      >
+        <div className="flex items-center justify-center gap-2">
+          <h1 className="text-5xl md:text-7xl lg:text-9xl font-extrabold font-serif text-blue-600  dark:text-orange-500">
+            Sentry
+          </h1>
+        </div>
+      </motion.div>
+      <motion.div
+        className="mt-10 border-t border-gray-300 dark:border-gray-700 pt-6 text-sm flex flex-col md:flex-row justify-between items-center gap-4"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
         <p>&copy; {new Date().getFullYear()} Jeshrun.Store. All rights reserved.</p>
@@ -96,7 +109,7 @@ export default function Footer() {
       {showTopBtn && (
         <motion.button
         onClick={scrollToTop}
-        className="fixed bottom-6 right-6 p-3 rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 z-50"
+        className="fixed bottom-6 right-6 p-3 rounded-full bg-blue-600 dark:bg-orange-600 text-white shadow-lg hover:bg-blue-700 z-50"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}

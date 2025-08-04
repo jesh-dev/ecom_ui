@@ -43,6 +43,7 @@ export const products = [
         name: "Iphone 16 Pro",
         price: 1120,
         description: "Premium vintage leather shoulder bag with adjustable strap.",
+        category: "Smartphones",
         image: iphone16pro,
         gallery: [iphone16pink, iphone16pro, iphone16white],
       },
@@ -51,6 +52,7 @@ export const products = [
         name: "Iphone 14 Pro Max",
         price: 985,
         description: "Iphone 14 Pro Max, 256GB, Space Gray, Unlocked, Excellent Condition.",
+        category: "Smartphones",
         image: iphone14,
         gallery: [iphone14, iphone_14_black, iphone_14_blue],
       },
@@ -60,10 +62,12 @@ export const products = [
         price: 199,
         description: "Feature-packed smart watch with customizable straps.",
         image: watch1,
+          category: "Wearables",
         gallery: [
           watch1a,
           watch1b,
           watch1c,
+          
         ],
       },
       {
@@ -71,6 +75,7 @@ export const products = [
         name: "MACBOOK PRO 16",
         price: 11120,
         description: "Track your fitness and stay connected.",
+        category: "Laptops",
          image: mac1,
             gallery: [
               mac1a,
