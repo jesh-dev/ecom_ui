@@ -43,7 +43,7 @@ export default function ProductPage() {
           <motion.div
             layout
             key={selectedProduct.id}
-            className="bg-white dark:bg-black shadow-xl rounded-xl p-6 mb-10 flex flex-col md:flex-row gap-10 border border-gray-200 dark:border-orange-800"
+            className="bg-white dark:bg-black shadow-xl rounded-xl p-6 mb-10 flex flex-col md:flex-row gap-10  border-gray-200 dark:border-orange-800"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -53,7 +53,7 @@ export default function ProductPage() {
               <motion.img
                 src={mainImage}
                 alt={selectedProduct.name}
-                className="w-full h-[400px] object-contain rounded-lg border border-gray-200 dark:border-orange-700 mb-4"
+                className="w-full h-[400px] object-contain rounded-lg  border-gray-200 dark:border-orange-700 mb-4"
                 initial={{ opacity: 0.5 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
@@ -64,7 +64,7 @@ export default function ProductPage() {
                     key={idx}
                     src={img}
                     onClick={() => setMainImage(img)}
-                    className={`w-20 h-20 object-cover rounded border cursor-pointer transition-all duration-200"
+                    className={`w-20 h-20 object-cover rounded  cursor-pointer transition-all duration-200"
                                                  ${
                                                    mainImage === img
                                                      ? "border-blue-500 dark:border-orange-500"
@@ -91,7 +91,7 @@ export default function ProductPage() {
                   {["X", "M", "L", "XL"].map((size) => (
                     <button
                       key={size}
-                      className="px-4 py-2 border border-gray-300 dark:border-orange-600 rounded hover:bg-blue-600 dark:hover:bg-orange-600 hover:text-white"
+                      className="px-4 py-2  border-gray-300 dark:border-orange-600 rounded hover:bg-blue-600 dark:hover:bg-orange-600 hover:text-white"
                     >
                       {size}
                     </button>
@@ -115,7 +115,7 @@ export default function ProductPage() {
             layout
             key={product.id}
             onClick={() => handleSelectProduct(product)}
-            className="cursor-pointer bg-white dark:bg-black   border border-blue-400 dark:border-orange-700 rounded-lg dark:hover:shadow-lg dark:hover:shadow-orange-600 overflow-hidden shadow hover:shadow-xl transition duration-700"
+            className="cursor-pointer bg-white dark:bg-black    border-blue-400 dark:border-orange-700 rounded-lg dark:hover:shadow-lg dark:hover:shadow-orange-600 overflow-hidden shadow hover:shadow-xl transition duration-700"
             whileHover={{ scale: 1.02 }}
           >
             <img
