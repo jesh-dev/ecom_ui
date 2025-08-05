@@ -2,10 +2,10 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "../../../Components/Navbar";
 import Footer from "../../../Components/Footer";
-import Hero from "../../../Components/Hero";
 import { products } from "./Products";
 import { useCart } from "../../../Components/CartContext"; // Ensure this path is correct
 import { toast } from "react-hot-toast";
+import Breadcrumb from "./Breadcrumb";
 // import SearchFilter from "../../../Components/SearchFilter";
 
 export default function ProductPage() {
@@ -27,11 +27,17 @@ export default function ProductPage() {
   return (
     <>
     <Navbar/>
-    {/* <Hero/> */}
     {/* <SearchFilter/> */}
      <section className="bg-white dark:bg-black py-16 px-4">
 
     <div className="px-4 mt-10 py-10 max-w-7xl mx-auto">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Products", href: "/products" },
+              selectedProduct && { label: selectedProduct.name },
+            ].filter(Boolean)}
+          />
       <AnimatePresence>
         {selectedProduct && (
           <motion.div
